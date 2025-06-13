@@ -1,9 +1,7 @@
 package com.HEI.Hazavao.OpenAPIService;
 
-import io.github.cdimascio.dotenv.Dotenv;
 import java.util.List;
 import java.util.Map;
-import lombok.AllArgsConstructor;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -12,15 +10,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-@AllArgsConstructor
 public class OpenAPIService {
 
-  private final String apiKey;
+  private final String apiKey = "";
 
-  public OpenAPIService() {
+  /*public OpenAPIService() {
     Dotenv dotenv = Dotenv.load();
     this.apiKey = dotenv.get("API_KEY");
-  }
+  }*/
 
   private final RestTemplate restTemplate = new RestTemplate();
   private final String OPENAI_URL = "https://api.openai.com/v1/chat/completions";
