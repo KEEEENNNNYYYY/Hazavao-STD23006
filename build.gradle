@@ -109,6 +109,7 @@ jacocoTestReport {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'io.github.cdimascio:dotenv-java:3.0.0'
 
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 
